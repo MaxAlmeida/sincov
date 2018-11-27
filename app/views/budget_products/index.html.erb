@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Budget Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Integer</th>
+      <th>Product</th>
+      <th>Budget</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @budget_products.each do |budget_product| %>
+      <tr>
+        <td><%= budget_product.quantity %></td>
+        <td><%= budget_product.integer %></td>
+        <td><%= budget_product.product %></td>
+        <td><%= budget_product.budget %></td>
+        <td><%= link_to 'Show', budget_product %></td>
+        <td><%= link_to 'Edit', edit_budget_product_path(budget_product) %></td>
+        <td><%= link_to 'Destroy', budget_product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Budget Product', new_budget_product_path %>
