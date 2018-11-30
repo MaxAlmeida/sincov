@@ -4,6 +4,10 @@
 
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
+@font-face {
+  font-family: OpenSans-Regular;
+  src: font-url('OpenSans-Regular.ttf');
+}
 
 @font-face {
   font-family: Poppins-Regular;
@@ -203,7 +207,7 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #039be5;
+  background-color: #03a9f4;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -251,7 +255,7 @@ iframe {
   z-index: 1;
 }
 
-.form-control {
+.input100 {
   font-family: Raleway-SemiBold;
   font-size: 18px;
   line-height: 1.2;
@@ -282,7 +286,7 @@ iframe {
 }
 
 
-.form-control:focus + .focus-input100 {
+.input100:focus + .focus-input100 {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
@@ -327,7 +331,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.form-control:focus + .focus-input100 + .symbol-input100 {
+.input100:focus + .focus-input100 + .symbol-input100 {
   color: #0091ea;
   padding-left: 18px;
 }

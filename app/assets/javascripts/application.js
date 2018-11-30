@@ -22,4 +22,8 @@
 //= require main
 //= require jqBootstrapValidation
 //= require contact_me
+//= login
+//= select2
 //= require_tree .
+
+$('body').scrollspy({ target: '#menu' });
