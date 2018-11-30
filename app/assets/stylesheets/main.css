@@ -251,7 +251,7 @@ iframe {
   z-index: 1;
 }
 
-.input100 {
+.form-control {
   font-family: Raleway-SemiBold;
   font-size: 18px;
   line-height: 1.2;
@@ -281,7 +281,8 @@ iframe {
   color: rgba(47,35,111, 0.6);
 }
 
-.input100:focus + .focus-input100 {
+
+.form-control:focus + .focus-input100 {
   -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
   animation: anim-shadow 0.5s ease-in-out forwards;
 }
@@ -326,7 +327,7 @@ iframe {
   transition: all 0.4s;
 }
 
-.input100:focus + .focus-input100 + .symbol-input100 {
+.form-control:focus + .focus-input100 + .symbol-input100 {
   color: #0091ea;
   padding-left: 18px;
 }

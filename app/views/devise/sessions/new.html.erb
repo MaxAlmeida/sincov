@@ -1,20 +1,68 @@
-<h2>Log in</h2>
+  <div class="limiter">
+    <div class="container-login100">
+      <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
+        <form class="login100-form validate-form">
+          <span class="login100-form-title p-b-55">
+            Login
+          </span>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
+
+  <div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+    <%= f.input :email, required: false, label: false, placeholder: 'Email', input_html: {:class => "input100" } %>
+    <span class="focus-input100"></span>
+    <span class="symbol-input100">
+    <span class="lnr lnr-envelope"></span>
+  </span>
+</div>
+
+<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+    <%= f.input :password, required: false, label:false, placeholder: 'Senha',
+      input_html: { class: "input100" } %>
+      <span class="focus-input100"> </span>
+      <span class="symbol-input100">
+    <span class="lnr lnr-lock"></span>
+  </span>
+</div>
+
+<div class="contact100-form-checkbox m-l-4">
+  <%= f.input :remember_me, label:false, input_html: {id: "ckb1", class: "input-checkbox100"}, as: :boolean if devise_mapping.rememberable? %>
+  <label class="label-checkbox100" for="ckb1">
+    Remember me
+  </label>
+</div>
+
+<div class="container-login100-form-btn p-t-25">
+  <%= f.button :button, "Login", class: "login100-form-btn" %>
+</div>
+
+<div class="text-center w-full p-t-42 p-b-22">
+  <span class="txt1">
+    Ou logue-se com
+  </span>
+</div>
+
+<a href="#" class="btn-face m-b-10">
+  <i class="fa fa-facebook-official"></i>
+  Facebook
+</a>
+
+<a href="#" class="btn-google m-b-10">
+  <%= image_tag("icon-google.png", :alt=> "GOOGLE") %>
+  Google
+</a>
+
+
+
+
+    <%= render "devise/shared/links" %>
+
+
+
 <% end %>
-
+</form>
+</div>
+</div>
+</div
 <%= render "devise/shared/links" %>
