@@ -7,19 +7,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
+    <%= favicon_link_tag asset_path('icon-google.png') %>
     <%= csrf_meta_tags %>
 
   </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <%= render "layouts/navbar" %>
-    <%= render "layouts/header" %>
+
+
     <%= yield %>
-    <%= render "layouts/about" %>
-    <%= render "layouts/services" %>
-    <%= render "layouts/portfolio" %>
-    <%= render "layouts/footer" %>
+
+
   </body>
   </html>
