@@ -12,7 +12,8 @@
 
   </head>
     <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
-
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
       <%= yield %>
       <% unless user_signed_in? %>
       <%= render partial: 'users/registrations/signup_modal' %>

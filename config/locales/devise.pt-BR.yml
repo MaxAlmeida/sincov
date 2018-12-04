@@ -1,6 +1,21 @@
 # encoding: UTF-8
 # pt-BR translations for Devise
+
 pt-BR:
+  activerecord:
+    errors:
+      models:
+          user:
+            attributes:
+              name:
+                blank: "Este campo deve ser preenchido"
+              password:
+                  confirmation: "A senha não conresponde com a confirmação de senha."
+                  blank: "Este campo deve ser preenchido"
+                  too_short: "Senha muito curta (mínimo de 6 caracteres). "
+              email:
+                  blank: "Este campo deve ser preenchido."
+
   devise:
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso. Você está logado."

@@ -18,6 +18,8 @@
 //= require nivo-lightbox
 //= require main
 //= require turbolinks
+//= require rails.validations
+//= require rails.validations.simple_form
 //= select2
 //= signin
 //= require_tree .
