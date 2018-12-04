@@ -5,19 +5,18 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true  %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= favicon_link_tag asset_path('icon-google.png') %>
     <%= csrf_meta_tags %>
 
   </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
-
-
-
-    <%= yield %>
-
-
-  </body>
+      <%= yield %>
+      <% unless user_signed_in? %>
+      <%= render partial: 'users/registrations/signup_modal' %>
+      <%= render partial: 'users/sessions/new' %>
+    <% end %>
+    </body>
   </html>

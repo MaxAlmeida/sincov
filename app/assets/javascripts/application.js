@@ -10,9 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
@@ -20,10 +18,7 @@
 //= require SmoothScroll
 //= require nivo-lightbox
 //= require main
-//= require jqBootstrapValidation
-//= require contact_me
-//= login
+//= require turbolinks
 //= select2
+//= signin
 //= require_tree .
-
-$('body').scrollspy({ target: '#menu' });

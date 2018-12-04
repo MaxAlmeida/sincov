@@ -7,19 +7,32 @@
     </button>
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="navbar-nav">
+    <% if !user_signed_in? %>
       <li class="nav-item"><a class="nav-link" href="#about" class="page-scroll">Sobre nós</a></li>
       <li class="nav-item"><a class="nav-link" href="#services" class="page-scroll">Serviços</a></li>
       <li class="nav-item"><a class="nav-link" href="#portfolio" class="page-scroll">portfolio</a></li>
       <li class="nav-item"><a class="nav-link" href="#contact" class="page-scroll">Contato</a></li>
+      <% end %>
     </ul>
 
       <ul class="navbar-nav nav ml-auto">
         <% if user_signed_in? %>
-            <li class="nav-item "><%= link_to('My Account', edit_user_registration_path, class:"nav-link page-scroll") %></li>
-            <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.name %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <%= link_to 'Editar perfil', edit_user_registration_path, class:"dropdown-item" %>
+            <a class="dropdown-item" href="#">Orçamento</a>
+            <%= link_to 'Deslogar', destroy_user_session_path, :method => :delete, class:"dropdown-item" %>
+
+          </div>
+        </li>
           <% else %>
-            <li class="nav-item"><%= link_to('Fazer login', new_user_session_path, class: "nav-link page-scroll") %></li>
-            <li class="nav-item"><%= link_to('Cadastre-se', new_user_registration_path, class: "nav-link page-scroll") %></li>
+          <li class="nav-item"><%= link_to('Faça login',new_user_session_path, class: "nav-link page-scroll",'data-toggle' => 'modal', 'data-target' => '#login-modal', remote: true )%> </li>
+            <li class="nav-item"><%= link_to('Cadastre-se',new_user_registration_path, class: "nav-link page-scroll",'data-togle' => 'modal', 'data-target' => '#register-modaldesative' ) %></li>
+            <!--  <li class="nav-item"><#%= link_to('Cadastre-se', new_user_registration_path, class: "nav-link page-scroll") %></li> -->
+
           <% end %>
       </ul>
   </div>

@@ -4,7 +4,7 @@
 
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html:{class: "login100-form validate-form"}) do |f| %>
-  <%= f.error_notification %>
+  <%= devise_error_messages! %>
   <span class="login100-form-title p-b-55">
     Cadastre-se
   </span>
@@ -14,8 +14,8 @@
       <span class="symbol-input100">
         <span class="lnr lnr-user"></span>
     </span>
-</div>
-  <div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+  </div>
+  <div class="wrap-input100 validate-input m-b-16">
       <%= f.input :email, required: true, label: false, placeholder: 'Email', input_html: {:class => "input100" }, wrapper:false %>
       <span class="focus-input100"></span>
       <span class="symbol-input100">
@@ -60,4 +60,6 @@
   </div>
 </div>
 
+  </div>
+  </div>
   </div>

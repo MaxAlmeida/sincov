@@ -1,0 +1,28 @@
+jQuery(document).ready(function() {
+  var $error_div = $('#signin_error');
+  window.$erro_div = $(this).attr('href');
+
+  $(window).on('show.bs.modal',function() {
+      console.log("entrei no modal");
+      console.log($error_div);
+      //form id
+      $('#sign_in_user').on("ajax:error", function(evt, xhr, status, error) {
+        $error_div = $('#signin_error');
+        //function called on status: 401 or 500 (for ex.)
+        message =  xhr.responseText;
+        $error_div.show();
+        console.log($erro_div);
+
+        $error_div.html('<div class="alert alert-danger">'+message+'</div>');
+        $error_div.delay("2500").fadeOut("10000");
+
+        console.log(message);
+      });
+    });
+
+    $(window).on('hidden.bs.modal', function() {
+      console.log("saindo modal");
+      $error_div.html('');
+      $error_div.show();
+    });
+  });

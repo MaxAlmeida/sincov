@@ -93,6 +93,10 @@ hr {
 	color: #ce2a36;
 }
 
+.dropdown:hover>.dropdown-menu{
+	display: block;
+}
+
 li.active a { color: #ce2a36 !important; background-color: white; }
 
 .navbar-expand-lg .navbar-nav > .active > a, .navbar-expand-lg .navbar-nav > .active > a:hover, .navbar-expand-lg .navbar-nav > .active > a:focus {
