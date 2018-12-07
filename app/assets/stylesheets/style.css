@@ -73,8 +73,8 @@ hr {
 }
 #menu a.navbar-brand {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 32px;
-	font-weight: 700;
+	font-size: 25px;
+	font-weight: 600;
 	color: #1f386e;
 	text-transform: uppercase;
 	letter-spacing: -1px;
@@ -177,12 +177,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	display: table;
 	width: 100%;
 	padding: 0;
-	background: url('vidro.jpg') center center no-repeat;
+	background: url('glass-arc.jpg') center center no-repeat;
 	background-color: #e5e5e5;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
+	background-position: cover;
 }
 .intro .overlay {
 	background: rgba(0,0,0,0.3);
@@ -207,7 +208,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background: rgba(0,0,0,.45);
 }
 header .intro-text {
-	padding-top: 350px;
+	padding-top: 200px;
 	padding-bottom: 150px;
 	text-align: center;
 }

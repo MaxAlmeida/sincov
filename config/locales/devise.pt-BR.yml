@@ -2,6 +2,10 @@
 # pt-BR translations for Devise
 
 pt-BR:
+  errors:
+    messages:
+      email: "Já tem esse email"
+
   activerecord:
     errors:
       models:
@@ -13,8 +17,12 @@ pt-BR:
                   confirmation: "A senha não conresponde com a confirmação de senha."
                   blank: "Este campo deve ser preenchido"
                   too_short: "Senha muito curta (mínimo de 6 caracteres). "
+              current_password:
+                  blank: "Precisamos de sua senha atual para confirmar as mudanças."
               email:
                   blank: "Este campo deve ser preenchido."
+                  invalid: "Email inválido."
+                  taken: "Já existe um cadastro com esse email."
 
   devise:
     confirmations:

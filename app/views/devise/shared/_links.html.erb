@@ -1,12 +1,11 @@
 
-<% if false %>
+
 <%- if controller_name != 'sessions' %>
   <%= link_to  new_session_path(resource_name) do %>
     <span class="signup-login">Log in</span><br />
     <% end -%>
 <% end -%>
 
-<% end %>
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
   <%= link_to "Esqueceu a senha?", new_password_path(resource_name) %><br />
 <% end -%>

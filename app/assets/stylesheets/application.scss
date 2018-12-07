@@ -13,3 +13,49 @@
 @import "util.css";
 @import "icon-font.min";
 @import "main";
+
+
+@media only screen and (min-width: 600px) {
+  .modal-dialog {
+    width:350px;
+          }
+}
+
+
+.wrap-edit100 {
+  width: 450px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+//body { padding-top: 90px; }
+
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }

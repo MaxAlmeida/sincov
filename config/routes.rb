@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
+
+
+  #get 'email_validator/:email', to: 'validates#email_uniquess',constraints: { email: /[^\/]+/}
   resources :budget_products
   resources :budgets
   resources :products

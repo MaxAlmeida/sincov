@@ -3,6 +3,8 @@ jQuery(document).ready(function() {
   window.$erro_div = $(this).attr('href');
 
   $(window).on('show.bs.modal',function() {
+
+
       console.log("entrei no modal");
       console.log($error_div);
       //form id
@@ -21,8 +23,25 @@ jQuery(document).ready(function() {
     });
 
     $(window).on('hidden.bs.modal', function() {
+    //  $('body').removedClass('modal-open');
+
       console.log("saindo modal");
       $error_div.html('');
       $error_div.show();
     });
+
+
+    $('.modal').on('shown.bs.modal', function () {
+       $('body').addClass('modal-open');
+       // BS adds some padding-right to acomodate the scrollbar at right
+       $('body').removeAttr('style');
+     });
+
+  });
+
+
+
+  $(document).on('shown.bs.modal', '.modal', function() {
+    $('form[data-client-side-validations]').enableClientSideValidations();
+    console.log("entrei no modal register");
   });

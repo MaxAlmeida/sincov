@@ -1,6 +1,6 @@
-<nav id="menu" class="navbar navbar-expand-lg navbar-light fixed-top">
 
-    <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag("glazing-icon2.png", size:"50x50")%>Vidraceiros</a>
+<nav id="menu" class="navbar navbar-light navbar-expand-lg fixed-top bg-white">
+    <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag("glazing-icon2.png", size:"30x30", class:"img-responsive")%>Vidraceiros</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -14,6 +14,7 @@
       <li class="nav-item"><a class="nav-link" href="#contact" class="page-scroll">Contato</a></li>
       <% end %>
     </ul>
+
 
       <ul class="navbar-nav nav ml-auto">
         <% if user_signed_in? %>
@@ -29,12 +30,10 @@
           </div>
         </li>
           <% else %>
-          <li class="nav-item"><%= link_to('Faça login',new_user_session_path, class: "nav-link page-scroll",'data-toggle' => 'modal', 'data-target' => '#login-modal', remote: true )%> </li>
-            <li class="nav-item"><%= link_to('Cadastre-se',new_user_registration_path, class: "nav-link page-scroll",'data-togle' => 'modal', 'data-target' => '#register-modaldesative' ) %></li>
-            <!--  <li class="nav-item"><#%= link_to('Cadastre-se', new_user_registration_path, class: "nav-link page-scroll") %></li> -->
+          <li class="nav-item"><%= link_to('Faça login',new_user_session_path, class: "nav-link page-scroll",'data-toggle' => 'modal', 'data-target' => '#login-modal', remote: true, )%> </li>
+            <li class="nav-item"><%= link_to('Cadastre-se','#', class: "nav-link page-scroll",'data-toggle' => 'modal', 'data-target' => '#register-modal' ) %></li>
 
           <% end %>
       </ul>
   </div>
-
 </nav>

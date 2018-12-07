@@ -10,16 +10,18 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require activestorage
 //= require jquery3
+//= require jquery_ujs
+//= require activestorage
 //= require popper
 //= require bootstrap-sprockets
-//= require jquery_ujs
 //= require nivo-lightbox
 //= require main
 //= require turbolinks
 //= require rails.validations
 //= require rails.validations.simple_form
-//= select2
-//= signin
+//= require rails.validations.custom
+//= require select2
+//= require signin
+//= require signup
 //= require_tree .

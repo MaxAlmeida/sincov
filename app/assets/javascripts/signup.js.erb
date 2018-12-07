@@ -1,0 +1,27 @@
+
+jQuery(document).ready(function() {
+    var $error_div = $('#signup_error');
+    var validate;
+      $('#new_user').on("ajax:error", function(evt, xhr, status, error) {
+        //function called on status: 401 or 500 (for ex.)
+        message =  xhr.responseJSON.message
+        $error_div.show();
+        console.log($erro_div);
+
+        for (msg in message){
+          $error_div.html('<div class="alert alert-danger">'+message.email+'</div>');
+          $error_div.delay("2500").fadeOut("10000");
+        }
+        console.log(message.email);
+      });
+
+//$('#signin_in_register').click(function(){
+//    e.preventDefault();
+//    var href = this.href;
+//    $('#register-modal').modal('hide');
+//    $('#login-modal').modal('show');
+
+//    location.href = href;
+//});
+      //event.stopImmediatePropagation();
+    });
